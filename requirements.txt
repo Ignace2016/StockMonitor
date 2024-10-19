@@ -1,0 +1,8 @@
+yfinance 
+matplotlib
+pandas
+numpy
+seaborn
+plotly
+Flask
+nbformat
