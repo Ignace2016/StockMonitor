@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Monitoring Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Stock Monitoring Dashboard</h1>
+
+    <!-- Responsive grid container for the stock graphs -->
+    <div class="stock-grid">
+        {% for stock_name, graph_json in stock_graphs.items() %}
+            <div class="stock-item">
+                <div id="{{ stock_name }}" class="stock-plot"></div>
+                <script>
+                    var graphData = {{ graph_json | safe }};
+                    Plotly.newPlot('{{ stock_name }}', graphData.data, graphData.layout, {responsive: true});
+                </script>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
