@@ -7,16 +7,28 @@ app = Flask(__name__)
 
 # Dictionary of stock symbols
 stock_dict = {
+    'AMD': 'AMD',
     'Apple': 'AAPL',
+    'ASML': 'ASML',
+    'Broadcom': 'AVGO',
+    'Boeing': 'BA',
+    'C.H. Robinson': 'CHRW',
+    'Costco': 'COST',
+    'Disney': 'DIS',
+    'Expedia': 'EXPE',
+    'Google': 'GOOG',
+    'JP Morgan': 'JPM',
     'Microsoft': 'MSFT',
+    'Netflix': 'NFLX',
+    'Nike': 'NKE',
     'Nvidia': 'NVDA',
+    'QQQ': 'QQQ',
+    # 'RXO': 'RXO', # Period '5y' is invalid - no data
+    'Starbucks': 'SBUX',
     'Tesla': 'TSLA',
     'Uber': 'UBER',
-    'Expedia': 'EXPE',
-    'Netflix': 'NFLX',
-    'Google': 'GOOG',
-    'Costco': 'COST',
-    'VOO': 'VOO'
+    'VOO': 'VOO',
+    'XPO': 'XPO'
 }
 
 # Function to fetch stock data for a given period
